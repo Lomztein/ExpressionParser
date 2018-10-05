@@ -3,14 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package operatorprecedence;
+package expressionparser;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author Lomztein
  */
-public interface ITokenParser {
+public interface IToken {
     
-    ParseResult parse (String from);
+    int getPrecedence ();
+    
+    EvaluateResult evaluate (ArrayList<TokenData> allTokens, int thisIndex);
     
 }

@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package operatorprecedence;
+package expressionparser;
 
+import expressionparser.tokenparsers.NumberTokenParser;
+import expressionparser.tokenparsers.FromTokenableParser;
 import java.util.ArrayList;
-import operatorprecedence.tokenparsers.*;
 
 /**
  *
@@ -16,7 +17,7 @@ public class ExpressionParser {
 
     private final ITokenParser[] parsers = new ITokenParser[]{
         new NumberTokenParser(),
-        new OperatorTokenParser(),};
+        new FromTokenableParser(),};
 
     private final ArrayList<TokenData> tokens = new ArrayList<>();
 
@@ -26,7 +27,7 @@ public class ExpressionParser {
 
         parseTokens(input);
 
-        while (tokens.size() != 1) {
+        while (tokens.size() > 1) {
             
             TokenData next = findNextToEvaluate(tokens);
             int nextIndex = tokens.indexOf(next);
@@ -86,7 +87,7 @@ public class ExpressionParser {
             
             TokenData at = tokens.get(i);
 
-            int precedence = at.token.getPrecedence() + (at.depth * 100);
+            int precedence = at.token.getPrecedence() + (at.depth * 10);
             if (highestPrecedence < precedence) {
                 highestToken = at;
                 highestPrecedence = precedence;

@@ -3,20 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package operatorprecedence;
+package expressionparser.operators;
 
 /**
  *
  * @author Lomztein
  */
-public class TokenData {
+public interface Func {
     
-    public IToken token;
-    public int depth;
-    
-    public TokenData (IToken token, int depth) {
-        this.token = token;
-        this.depth = depth;
-    }
+    double evaluate (double... numbers);
     
 }

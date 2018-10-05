@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package operatorprecedence;
-
-import java.util.ArrayList;
+package expressionparser.operators;
 
 /**
  *
  * @author Lomztein
  */
-public interface IToken {
+public interface Operation {
     
-    int getPrecedence ();
-    
-    EvaluateResult evaluate (ArrayList<TokenData> allTokens, int thisIndex);
+    public double operate (double left, double right);
     
 }

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package operatorprecedence.tokenparsers;
+package expressionparser.tokenparsers;
 
-import operatorprecedence.IToken;
-import operatorprecedence.ITokenParser;
-import operatorprecedence.ParseResult;
-import operatorprecedence.Value;
+import expressionparser.IToken;
+import expressionparser.ITokenParser;
+import expressionparser.ParseResult;
+import expressionparser.Value;
 
 /**
  *
