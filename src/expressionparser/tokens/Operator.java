@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package expressionparser.operators;
+package expressionparser.tokens;
 
 import java.util.ArrayList;
 import expressionparser.EvaluateResult;
+import expressionparser.IEvaluable;
 import expressionparser.IToken;
 import expressionparser.ITokenable;
 import expressionparser.TokenData;
-import expressionparser.Value;
 
 /**
  *
  * @author Lomztein
  */
-public class Operator implements IToken, ITokenable {
+public class Operator implements IToken, ITokenable, IEvaluable {
     
     public Operator (String operator, int precedence, Operation operation) {
         this.operator = operator;

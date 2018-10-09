@@ -11,6 +11,10 @@ import java.util.ArrayList;
  *
  * @author Lomztein
  */
-public interface IToken {
+public interface IEvaluable extends IToken {
+    
+    int getPrecedence ();
+    
+    EvaluateResult evaluate (ArrayList<TokenData> data, int thisIndex);
     
 }

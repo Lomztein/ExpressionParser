@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package expressionparser.operators;
+package expressionparser.tokens;
 
 /**
  *
  * @author Lomztein
  */
-public interface Func {
+public interface Operation {
     
-    double evaluate (double... numbers);
+    public double operate (double left, double right);
     
 }

@@ -8,7 +8,7 @@ package expressionparser.tokenparsers;
 import expressionparser.IToken;
 import expressionparser.ITokenParser;
 import expressionparser.ParseResult;
-import expressionparser.Value;
+import expressionparser.tokens.Value;
 
 /**
  *
