@@ -8,7 +8,7 @@ namespace Lomztein.MathematicalExpressionParser {
 
     public class ExpressionParser {
 
-        private static ITokenParser[] Parsers { get; set; } = new ITokenParser[]{
+        public ITokenParser[] Parsers { get; set; } = new ITokenParser[]{
             new NumberTokenParser(),
             new FromTokenableParser(),
         };
